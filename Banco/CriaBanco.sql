@@ -28,12 +28,7 @@ CREATE TABLE Cliente (
 
 
 -- Insere informações:
-INSERT INTO Cidade (nome, estado) VALUES
-('São Paulo', 'SP'),
-('Campinas', 'SP'),
-('Ribeirão Preto', 'SP'),
-('Santos', 'SP'),
-('Sorocaba', 'SP');
+
 
 -- seleciona informações
 SELECT * FROM Cidade WHERE estado = 'SP';
