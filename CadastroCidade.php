@@ -9,6 +9,7 @@
 
 </head>
 <body>
+    
     <?php
     include('Includes/conexao.php');
         $nome = $_POST['nome'];

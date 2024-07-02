@@ -10,6 +10,7 @@
 <?php
         include('Includes/conexao.php');
         $result = mysqli_query($con, $sql);
+        
     ?>
 
 <?php

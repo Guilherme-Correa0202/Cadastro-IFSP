@@ -32,6 +32,7 @@
             }
         ?>
     </table>
+    
     <a href="index.html"><h3>Voltar ao inicio</h3></a>
 </body>
 </html>
