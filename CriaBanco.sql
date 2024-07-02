@@ -21,7 +21,7 @@ CREATE TABLE Cliente (
     FOREIGN KEY (cidade_id) REFERENCES Cidade(id)
 );
 
--- Insere informações
+-- Insere informações:
 INSERT INTO Cidade (nome, estado) VALUES
 ('São Paulo', 'SP'),
 ('Campinas', 'SP'),
