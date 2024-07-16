@@ -13,12 +13,14 @@
     <?php
     include('Includes/conexao.php');
         $nome = $_POST['nome'];
-        $estado = $_POST['estado'];
-        echo "<h1>Dados da cidade:</h1>";
+        $idade = $_POST['idade'];
+        $email = $_POST['email'];
+        echo "<h1>Dados do Cliente:</h1>";
         echo "Nome: $nome<br>";
-        echo "Estado: $estado<br>";
-        $sql = "INSERT INTO Cidade (nome, estado)";
-        $sql .= " VALUES('".$nome."', '".$estado."')";
+        echo "Idade: $idade<br>";
+        echo "email: $email<br>";
+        $sql = "INSERT INTO Cliente (nome, idade, email)";
+        $sql .= " VALUES('".$nome."', '".$idade."', '".$email."')";
         echo $sql;
         $result = mysqli_query($con, $sql);
         if($result){
@@ -29,8 +31,7 @@
             echo mysqli_error($con);
             }
     ?>
-    <a href="DeletarCidade.html"><h3>Deletar Cidade</h3></a>
-    <a href="CadastroCidade.html"><h3>Voltar ao cadastro</h3></a>
+    <a href="CadastroClientes.html"><h3>Voltar ao cadastro</h3></a>
     <a href="index.html"><h3>Voltar ao inicio</h3></a>
 </body>
 </html>

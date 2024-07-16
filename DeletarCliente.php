@@ -1,7 +1,7 @@
 <?php
     include("Includes/conexao.php");
     $id = $_GET["id"];
-    $sql = "SELECT * FROM Cidade WHERE id=$id";
+    $sql = "SELECT * FROM Cliente WHERE id=$id";
     $result = mysqli_query($con,$sql);
     $row = mysqli_fetch_array($result);
 ?>
@@ -19,19 +19,18 @@
 <?php
         include('Includes/conexao.php');
         $id = $_GET['id'];
-        $sql = "DELETE FROM Cidade WHERE id = $id";
+        $sql = "DELETE FROM Cliente WHERE id = $id";
         $result = mysqli_query($con, $sql);
         if($result){
-            echo "<h3>Cidade deletada com sucesso</h3>";
+            echo "<h3>Cliente deletado com sucesso</h3>";
         }
         else{
             echo "<h3>Erro ao deletar</h3>";
             echo mysqli_error($con);
             }
     ?>
-        <a href="ListarCidades.php"><h3>Ver as cidades cadastradas</h3></a>
-
-    <a href="CadastroCidade.html"><h3>Voltar ao cadastro</h3></a>
+    <a href="ListarClientes.php"><h3>Ver as cidades cadastradas</h3></a>
+    <a href="CadastroCliente.html"><h3>Voltar ao cadastro</h3></a>
     <a href="index.html"><h3>Voltar ao inicio</h3></a>
     </table>
 </body>

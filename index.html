@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,29 +8,39 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1>Selecione uma opção:</h1>
-    <h4>Olá, bem vindo ao meu sistema, escolha qual opção você deseja:</h4>
 
-    
-    <div>
-        <label for="cadastrar">Deseja cadastrar a cidade:</label>
-        <a href="CadastroCidade.html"><button id="cadastrar" name="cadastrar">Cadastrar</button></a>
-        <br>
+<body>
+    <div id="cidade">
+        <h1>CRUD CIDADES:</h1>
+        <h4>Olá, bem vindo ao meu sistema, escolha qual opção você deseja:</h4>
+
+
+        <div>
+            <label for="cadastrar">Deseja cadastrar a cidade:</label>
+            <a href="CadastroCidade.html"><button id="cadastrar" name="cadastrar">Cadastrar</button></a>
+            <br>
+        </div>
+        <div>
+            <label for="listar">Deseja listar as cidades:</label>
+            <a href="ListarCidades.php"><button id="listar" name="listar">Listar</button></a>
+            <br>
+        </div>
     </div>
-    <div>
-        <label for="listar">Deseja listar as cidades:</label>
-        <a href="ListarCidades.php"><button id="listar" name="listar">Listar</button></a>
-        <br>
-    </div>
-    <div>
-        <label for="atualizar">Deseja atualizar uma cidade:</label>
-        <a href="index.html"><button id="atualizar" name="atualizar">Atualizar</button></a>
-        <br>
-    </div>
-    <div>
-        <label for="deletar">Deseja deletar uma cidade:</label>
-        <a href="DeletarCidade.html"><button id="deletar" name="deletar">Deletar</button></a>
+
+    <div id="cliente">
+        <h1>CRUD CLIENTE:</h1>
+        <h4>Olá, bem vindo ao meu sistema, escolha qual opção você deseja:</h4>
+        <div>
+            <label for="cadastrar">Deseja cadastrar um cliente:</label>
+            <a href="CadastroCliente.html"><button id="cadastrarC" name="cadastrarC">Cadastrar</button></a>
+            <br>
+        </div>
+        <div>
+            <label for="listar">Deseja listar as cidades:</label>
+            <a href="Listarclientes.php"><button id="listarC" name="listarC">Listar</button></a>
+            <br>
+        </div>
     </div>
 </body>
+
 </html>

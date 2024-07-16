@@ -11,16 +11,17 @@
 <body>
     <?php
         include('Includes/conexao.php');
-        $sql = "select * from Cidade";
+        $sql = "select * from Cliente";
         $result = mysqli_query($con, $sql);
     ?>
-    <h1>Consulta de Cidades:</h1>
-    <a href="CadastroCidade.html"><h3>Cadastrar Cidade</h3></a>
+    <h1>Consulta de Clientes:</h1>
+    <a href="CadastroCliente.html"><h3>Cadastrar Cliente</h3></a>
     <table align="center" border="1" width="500px">
         <tr>
             <Th>Codigo</Th>
             <th>Nome</th>
-            <th>Estado</th>
+            <th>Idade</th>
+            <th>Email</th>
             <th>Alterar</th>
             <th>Deletar</th>
         </tr>
@@ -29,14 +30,14 @@
                 echo"<tr>";
                 echo"<td>".$row['id']."</td>";
                 echo"<td>".$row['nome']."</td>";
-                echo"<td>".$row['estado']."</td>";
-                echo"<td><a href='AtualizarCadastro.php?id=".$row['id']."'>Altera</a></td>";
-                echo"<td><a href='DeletarCidade.php?id=".$row['id']."'>Deleta</a></td>";
+                echo"<td>".$row['idade']."</td>";
+                echo"<td>".$row['email']."</td>";
+                echo"<td><a href='AtualizarCliente.php?id=".$row['id']."'>Altera</a></td>";
+                echo"<td><a href='DeletarCliente.php?id=".$row['id']."'>Deleta</a></td>";
                 echo"</tr>";
             }
         ?>
     </table>
-    <a href="DeletarCidade.html"><h3>Deletar Cidade</h3></a>
     <a href="index.html"><h3>Voltar ao inicio</h3></a>
 </body>
 </html>
