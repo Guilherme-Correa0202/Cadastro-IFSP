@@ -18,18 +18,43 @@
 <body>
 <form action="AtualizarClienteExe.php" method="post">
         <fieldset>
-            <legend>Atulizar Cliente</legend>
             <div>
                 <label for="nome">Nome</label>
                 <input type="text" name="nome" id="nome" value=" <?php echo $row['nome'] ?>">
             </div>
             <div>
                 <label for="idade">Idade</label>
-                <input type="text" name="idade" id="idade" value="<?php echo $row['idade'] ?>">
+                <input type="number" name="idade" id="idade" value="<?php echo $row['idade'] ?>">
+            </div>
+            <div>
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" id="senha" value="<?php echo $row['senha'] ?>">
             </div>
             <div>
                 <label for="email">Email</label>
                 <input type="email" name="email" id="email" value=" <?php echo $row['email'] ?>">
+            </div>
+            <div>
+                <label for="ativo">Ativo</label>
+                <select name="ativo" id="ativo">
+                    <option value="Sim">Sim</option>
+                    <option value="Não">Não</option>
+                </select>
+            </div>
+            <div>
+                <label for="cidade">Cidade:</label>
+                <select name="cidade" id="cidade" >
+                <?php
+                    include('Includes/conexao.php');
+                    $sql = "SELECT * FROM Cidade";
+                    $result = mysqli_query($con, $sql);
+                    while($row_cid = mysqli_fetch_array($result)){
+                        $sel = $row_cid['id'] == $row['cidade_id']?"selected":"";
+                        echo " <option  value ='".$row_cid['id']."'".$sel.">".$row_cid['nome']."/".$row_cid['estado']."</option>";
+                    }
+
+                ?>
+                </select>
             </div>
             <button type="submit">Atualizar</button>
             <div>

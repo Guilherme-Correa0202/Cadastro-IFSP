@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,12 +14,19 @@
     <?php
     include('Includes/conexao.php');
         $nome = $_POST['nome'];
-        $estado = $_POST['estado'];
-        echo "<h1>Dados da cidade:</h1>";
+        $idade = $_POST['idade'];
+        $email = $_POST['email'];
+        $ativo = $_POST['ativo'];
+        $senha = $_POST['senha'];
+        $cidade = $_POST['cidade'];
+        
+        echo "<h1>Dados do Cliente:</h1>";
         echo "Nome: $nome<br>";
-        echo "Estado: $estado<br>";
-        $sql = "INSERT INTO Cidade (nome, estado)";
-        $sql .= " VALUES('".$nome."', '".$estado."')";
+        echo "Idade: $idade<br>";
+        echo "email: $email<br>";
+        echo "Ativo: $ativo<br>";
+        $sql = "INSERT INTO Cliente (nome, idade, email, ativo, senha, cidade_id)";
+        $sql .= " VALUES('".$nome."', '".$idade."', '".$email."', '".$ativo."', '".$senha."' ,'".$cidade."')";
         echo $sql;
         $result = mysqli_query($con, $sql);
         if($result){
@@ -29,7 +37,7 @@
             echo mysqli_error($con);
             }
     ?>
-    <a href="CadastroCidade.html"><h3>Voltar ao cadastro</h3></a>
+    <a href="CadastroCliente.php"><h3>Voltar ao cadastro</h3></a>
     <a href="index.html"><h3>Voltar ao inicio</h3></a>
 </body>
 </html>

@@ -36,7 +36,6 @@
             }
         ?>
     </table>
-    <a href="DeletarCidade.html"><h3>Deletar Cidade</h3></a>
     <a href="index.html"><h3>Voltar ao inicio</h3></a>
 </body>
 </html>
