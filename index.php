@@ -6,10 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <?php
+        include('inicia_sessao.php');
+        if(empty($_SESSION['login'])){
+            header("Location:login.html");
+        }   
+      
+
+    ?>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <div id="nome">
+        <?php
+            echo "<a>Olá!!! ". $_SESSION['login']['nome']."</a>";
+            echo "<a href = 'logout.php'><button>Logout</button></a>"
+        ?>
+    </div>
     <div id="cidade">
         <h1>CRUD CIDADES:</h1>
         <h4>Olá, bem vindo ao meu sistema, escolha qual opção você deseja:</h4>
@@ -36,6 +52,7 @@
             <br>
         </div>
         <div>
+            
             <label for="listar">Deseja listar as cidades:</label>
             <a href="Listarclientes.php"><button id="listarC" name="listarC">Listar</button></a>
             <br>

@@ -63,6 +63,6 @@
         </fieldset>
     </form>
     <a href="ListarClientes.php"><h3>Ver as cidades cadastradas</h3></a>
-    <a href="index.html"><h3>Voltar ao inicio</h3></a>
+    <a href="index.php"><h3>Voltar ao inicio</h3></a>
 </body>
 </html>
